@@ -82,6 +82,9 @@ table.data tr.total td{font-weight:800;border-bottom:none;background:var(--shade
 .tablewrap td:first-child{overflow-wrap:anywhere}
 .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:99px}
 .tag.ok{background:#E3F2E8;color:var(--green)} .tag.warn{background:#FBEED3;color:#8A5A12} .tag.bad{background:#F9DED6;color:var(--alert)}
+  .top3{list-style:none;margin:10px 0 0;padding:10px 0 0;border-top:1px solid var(--hairline);display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+  .top3 li{display:flex;justify-content:space-between;gap:10px;line-height:1.35}
+  .top3 .amt{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--ink-soft)}
 .reveal{display:none;flex-direction:column;gap:14px}
 .reveal.shown{display:flex;animation:rise .28s ease-out}
 @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -110,8 +113,8 @@ table.data tr.total td{font-weight:800;border-bottom:none;background:var(--shade
       <img class="logo" alt="XanaLife, Every Day Better" src="https://www.xanalife.com/cdn/shop/files/logo_svg.svg?v=1764271953&width=832">
       <div class="eyebrow">XanaLife Syokimau · monthly meeting · September 2026</div>
       <h1>Syokimau monthly meeting.</h1>
-      <p class="lede">Issues closed, issues still open, August and September sales against budget and break-even, and what the new deli &amp; bakery range is telling us.</p>
-      <p class="ref">Swipe or tap Next · 11 short screens · works on your phone</p>
+      <p class="lede">Issues closed, issues still open, August and September sales against budget and break-even, department splits, and what the new deli &amp; bakery range is telling us.</p>
+      <p class="ref">Swipe or tap Next · 13 short screens · works on your phone</p>
       <p class="ref">Presented by Mwago / Mwadime</p>
     </div>
   </section>
@@ -186,13 +189,27 @@ table.data tr.total td{font-weight:800;border-bottom:none;background:var(--shade
       <tr><td>21 Aug</td><td class="num">886,076</td><td class="num">161%</td><td class="num">136%</td></tr>
       <tr><td>28 Aug</td><td class="num">738,792</td><td class="num">134%</td><td class="num">114%</td></tr>
     </table></div>
-    <p class="ref">Source deck lists 7 Aug twice with identical figures; shown once. Aug chart slide had no extractable figure.</p>
+    <p class="ref">Source deck lists 7 Aug twice with identical figures; shown once.</p>
   </section>
 
-  <!-- 07 band september -->
+  <!-- 07 august departments -->
+  <section class="slide tall">
+    <div class="eyebrow">05 · August · wholesale · pharmacy · liquor · deli · retail</div>
+    <h2>Where August sales came from.</h2>
+    <p class="why">15,422 invoices · Jan 8 – Dec 9, 2026 window on the dashboard card.</p>
+    <div class="grid2">
+      <div class="box"><span class="box-label">Wholesale · 38.4%</span><span class="big">5,220,832</span><span class="sub">958 · 2,310</span><div class="bar"><i style="width:38.4%"></i></div><ul class="top3"><li>Ajab All Purpose 2Kg Bale x12 Pcs <span class="amt">198,255</span></li><li>Brookside Fino 500Ml Box x12Pcs <span class="amt">183,024</span></li><li>Mt Kenya Esl 500Ml x18Pcs <span class="amt">146,826</span></li></ul></div>
+      <div class="box"><span class="box-label">Pharmacy · 5.7%</span><span class="big">769,672</span><span class="sub">1,089 · 1,593</span><div class="bar"><i style="width:5.7%"></i></div><ul class="top3"><li>Lamictal (Lamotrigine) 100Mg Table… <span class="amt">33,600</span></li><li>Tiza-Q (Tirzepatide) 5Mg 1'S <span class="amt">31,800</span></li><li>Mestinon 60Mg 20'S <span class="amt">10,590</span></li></ul></div>
+      <div class="box"><span class="box-label">Liquor · 8.8%</span><span class="big">1,197,553</span><span class="sub">756 · 918</span><div class="bar amber"><i style="width:8.8%"></i></div><ul class="top3"><li>Jack Daniel 1L <span class="amt">83,600</span></li><li>Martel Vsop 700Ml <span class="amt">46,800</span></li><li>Jack Daniels 700Ml <span class="amt">36,000</span></li></ul></div>
+      <div class="box"><span class="box-label">Deli / Bakery · 11.7%</span><span class="big">1,590,925</span><span class="sub">7,994 · 12,085</span><div class="bar amber"><i style="width:11.7%"></i></div><ul class="top3"><li>XanaLife Pilau <span class="amt">146,445</span></li><li>XanaLife Chips Per Kg <span class="amt">129,329</span></li><li>XanaLife Grilled Chicken Full <span class="amt">95,560</span></li></ul></div>
+      <div class="box"><span class="box-label">Retail · 35.5%</span><span class="big">4,825,867</span><span class="sub">6,626 · 18,995</span><div class="bar"><i style="width:35.5%"></i></div><ul class="top3"><li>Mt Kenya Esl 500Ml x18Pcs <span class="amt">140,994</span></li><li>Sunrice Basmati 10Kg <span class="amt">122,640</span></li><li>Top Fry 10L <span class="amt">87,330</span></li></ul></div>
+    </div>
+    <p class="note">Wholesale plus retail carry three-quarters of August. Pharmacy is the smallest slice at 5.7%.</p>
+  </section>
+  <!-- 08 band september -->
   <section class="slide band">
     <div class="inner">
-      <div class="eyebrow">Part three · September to 26th</div>
+      <div class="eyebrow">Part three · September to 26th (chart runs Sep 1 – Sep 27)</div>
       <div class="bignum">10.5M</div>
       <h1>September to 26th: 63% of budget.</h1>
       <p class="lede">KSh 10,549,712 with days left to close the gap. Average daily sales 405,758 vs a 550,000 budget and 650,000 break-even.</p>
@@ -201,7 +218,7 @@ table.data tr.total td{font-weight:800;border-bottom:none;background:var(--shade
 
   <!-- 08 september detail -->
   <section class="slide tall">
-    <div class="eyebrow">05 · September vs budget vs break-even</div>
+    <div class="eyebrow">06 · September vs budget vs break-even</div>
     <h2>The September scorecard.</h2>
     <div class="grid3">
       <div class="box"><span class="box-label">Total sales (to 26th)</span><span class="big">10.55M</span><span class="sub">Budget 16.50M · BE 19.50M</span></div>
@@ -217,10 +234,25 @@ table.data tr.total td{font-weight:800;border-bottom:none;background:var(--shade
     </table></div>
     <p class="note">Three spike days clear both lines by 30–80%. The question for the room: what made those days different?</p>
   </section>
+  <!-- 09 september departments -->
+  <section class="slide tall">
+    <div class="eyebrow">07 · September · wholesale · pharmacy · liquor · deli · retail</div>
+    <h2>Where September sales come from.</h2>
+    <p class="why">13,880 invoices · Sep 1 – Sep 27, 2026.</p>
+    <div class="grid2">
+      <div class="box"><span class="box-label">Wholesale · 32.8%</span><span class="big">3,463,716</span><span class="sub">757 · 1,571</span><div class="bar"><i style="width:32.8%"></i></div><ul class="top3"><li>Mt Kenya Esl 500Ml <span class="amt">167,297</span></li><li>Top Fry 20L <span class="amt">111,100</span></li><li>Sunrice Basmati Rice 5Kg <span class="amt">86,136</span></li></ul></div>
+      <div class="box"><span class="box-label">Pharmacy · 6.9%</span><span class="big">730,500</span><span class="sub">948 · 1,341</span><div class="bar"><i style="width:6.9%"></i></div><ul class="top3"><li>Leucovorin 15Mg Tablets 20'S <span class="amt">25,200</span></li><li>Lamictal (Lamotrigine) 100Mg Tablet… <span class="amt">14,400</span></li><li>Liptomil Plus 2 (6–12 Months) 400g <span class="amt">11,350</span></li></ul></div>
+      <div class="box"><span class="box-label">Liquor · 8.9%</span><span class="big">936,145</span><span class="sub">659 · 805</span><div class="bar amber"><i style="width:8.9%"></i></div><ul class="top3"><li>Jack Daniel 1L <span class="amt">64,600</span></li><li>John Barr Black 1L <span class="amt">29,900</span></li><li>Jack Daniels 700Ml <span class="amt">27,000</span></li></ul></div>
+      <div class="box"><span class="box-label">Deli / Bakery · 12.6%</span><span class="big">1,331,550</span><span class="sub">6,811 · 10,488</span><div class="bar amber"><i style="width:12.6%"></i></div><ul class="top3"><li>XanaLife Pilau <span class="amt">134,363</span></li><li>XanaLife Chips Per Kg <span class="amt">125,082</span></li><li>XanaLife Beef Stew 1Kg <span class="amt">81,742</span></li></ul></div>
+      <div class="box"><span class="box-label">Retail · 38.7%</span><span class="big">4,087,801</span><span class="sub">8,061 · 17,272</span><div class="bar"><i style="width:38.7%"></i></div><ul class="top3"><li>Hanan Tissue 10Pk <span class="amt">83,930</span></li><li>Sunrice Basmati 10Kg <span class="amt">52,560</span></li><li>Mehak Biryani Rice 25kgs <span class="amt">51,750</span></li></ul></div>
+    </div>
+    <p class="note">Retail now leads at 38.7% while wholesale eases to 32.8%. Deli share ticks up to 12.6%.</p>
+  </section>
+
 
   <!-- 09 deli -->
   <section class="slide tall">
-    <div class="eyebrow">06 · Deli / bakery · newly introduced products</div>
+    <div class="eyebrow">08 · Deli / bakery · newly introduced products</div>
     <h2>Four products drive three-quarters of new-range revenue.</h2>
     <p class="why">Top four alone: <b>74.7% (KSh 238,760)</b>. Chapati Rolex leads. These should <b>never miss</b> on daily production.</p>
     <div class="tablewrap"><table class="data">
@@ -244,7 +276,7 @@ table.data tr.total td{font-weight:800;border-bottom:none;background:var(--shade
 
   <!-- 10 conclusion -->
   <section class="slide tall" data-steps="1">
-    <div class="eyebrow">07 · Conclusion</div>
+    <div class="eyebrow">09 · Conclusion</div>
     <h2>What we agree before leaving.</h2>
     <ol class="numlist">
       <li><b>Consistency</b> in deli &amp; bakery production — top four never out of stock.</li>
