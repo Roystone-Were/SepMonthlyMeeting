@@ -58,6 +58,7 @@ h3{font-size:clamp(19px,4.5vw,26px);font-weight:800;letter-spacing:-.016em;margi
 .numlist li::before{content:counter(n);position:absolute;left:0;top:0;font-weight:700;color:var(--green);font-size:20px;line-height:1.25;font-variant-numeric:tabular-nums}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
 .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+@media(max-width:559px){.grid3{grid-template-columns:1fr 1fr}.grid3>*:last-child:nth-child(odd){grid-column:1/-1}}
 .box{border:1px solid var(--hairline);background:var(--shade);padding:16px 18px;display:flex;flex-direction:column;gap:8px;border-radius:8px}
 .box-label{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
 .box.bad .box-label{color:var(--alert)} .box.good .box-label{color:var(--green)} .box.flag .box-label{color:var(--amber)}
