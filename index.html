@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>XanaLife Syokimau · Monthly Meeting · October 2026</title>
-<meta name="description" content="XanaLife Syokimau monthly meeting: previous issues, September and October sales, best sellers, Katani, and actions. Titoh / Mwadime.">
+<title>XanaLife Syokimau · Monthly Meeting · November 2026</title>
+<meta name="description" content="XanaLife Syokimau monthly meeting: issues raised, closed and pending, October sales, November to 21st, Katani minimatt and pharmacy, and deli new listings. Titoh / Mwadime.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-
   .stage[data-dir="fwd"] .slide.is-current{--sx:24px}
   .stage[data-dir="back"] .slide.is-current{--sx:-24px}
   @keyframes slideIn{from{opacity:0;transform:translateX(var(--sx,24px))}to{opacity:1;transform:none}}
-  .slide.is-current .pointlist li,.slide.is-current .numlist li,.slide.is-current .grid2>*,.slide.is-current .grid3>*{animation:listIn .34s ease-out backwards;animation-delay:calc(var(--n,0)*40ms)}
+  .slide.is-current .pointlist li,.slide.is-current .numlist li,.slide.is-current .grid2>*,.slide.is-current .grid3>*,.slide.is-current .grid5>*{animation:listIn .34s ease-out backwards;animation-delay:calc(var(--n,0)*40ms)}
   @keyframes listIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
   .slide.is-current .bar i{animation:grow .6s ease-out backwards;transform-origin:left center}
   @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
@@ -58,6 +58,11 @@ h3{font-size:clamp(19px,4.5vw,26px);font-weight:800;letter-spacing:-.016em;margi
 .numlist li::before{content:counter(n);position:absolute;left:0;top:0;font-weight:700;color:var(--green);font-size:20px;line-height:1.25;font-variant-numeric:tabular-nums}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
 .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.grid5{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+@media(min-width:900px){.grid5 .box .sub{min-height:2.5em}}
+.tables2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px}
+.tables2 .tablewrap{min-width:0}
+.tables2 .tablewrap{min-width:0}
 @media(max-width:559px){.grid3{grid-template-columns:1fr 1fr}.grid3>*:last-child:nth-child(odd){grid-column:1/-1}}
 .box{border:1px solid var(--hairline);background:var(--shade);padding:16px 18px;display:flex;flex-direction:column;gap:8px;border-radius:8px}
 .box-label{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
@@ -94,7 +99,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
 .prompt.hidden{display:none}
 .prompt kbd{font-family:inherit}
 .progress{position:fixed;top:0;left:0;height:4px;background:var(--green);width:0;z-index:50;transition:width .25s ease-out}
-@media(prefers-reduced-motion:reduce){.slide.is-current,.slide.is-current .pointlist li,.slide.is-current .numlist li,.slide.is-current .grid2>*,.slide.is-current .grid3>*,.slide.is-current .bar i,.reveal.shown{animation:none !important}.progress{transition:none}}
+@media(prefers-reduced-motion:reduce){.slide.is-current,.slide.is-current .pointlist li,.slide.is-current .numlist li,.slide.is-current .grid2>*,.slide.is-current .grid3>*,.slide.is-current .grid5>*,.slide.is-current .bar i,.reveal.shown{animation:none !important}.progress{transition:none}}
 .chrome{position:fixed;bottom:0;left:0;right:0;z-index:40;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-top:1px solid var(--hairline);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:10px}
 .chrome .who{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .chrome .nav{display:flex;align-items:center;gap:8px}
@@ -113,9 +118,9 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   <section class="slide band">
     <div class="inner">
       <img class="logo" alt="XanaLife, Every Day Better" src="xana-logo.png">
-      <div class="eyebrow">XanaLife Syokimau · monthly meeting · October 2026</div>
+      <div class="eyebrow">XanaLife Syokimau · monthly meeting · November 2026</div>
       <h1>Syokimau monthly meeting.</h1>
-      <p class="lede">Issues update, September and October sales, best sellers, and Katani.</p>
+      <p class="lede">Issues update, October full month, November to the 21st, Katani minimatt and pharmacy, and the new deli lines.</p>
       <p class="ref">Swipe or tap Next</p>
       <p class="ref">Presented by Titoh / Mwadime</p>
     </div>
@@ -125,15 +130,14 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   <section class="slide tall">
     <div class="eyebrow">01 · Where we started</div>
     <h2>Issues raised.</h2>
-    <p class="why">Seven items the team agreed to fix. This is the checklist we measure the rest of the deck against.</p>
+    <p class="why">Six items the team agreed to fix. This is the checklist the rest of the deck is measured against.</p>
     <ul class="pointlist">
-      <li>Delays on transfer orders to Katani.</li>
-      <li>Transfer orders to be dispatched through the receiving bay.</li>
-      <li>Kitchen sockets to be fixed on higher areas for easy accessibility.</li>
-      <li>Conduct stocktake for Syokimau.</li>
-      <li>Shelf labels for wholesale products to be fixed.</li>
-      <li>Get clear attire for fire and safety marshals.</li>
-      <li>Deli barcodes to be scanning.</li>
+      <li>Kitchen sockets to be fixed on higher areas for easy accessibility, and open sockets to be fixed.</li>
+      <li>Unavailability of products in the POS.</li>
+      <li>Back-up pharmacy cooler.</li>
+      <li>Regular maintenance of signages.</li>
+      <li>Regular servicing of deli appliances.</li>
+      <li>Thorough marketing of deli products and corporate onboarding.</li>
     </ul>
   </section>
 
@@ -142,11 +146,9 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
     <div class="eyebrow">02 · Progress</div>
     <h2>Issues closed.</h2>
     <div class="grid2">
-      <div class="box good"><span class="box-label">Closed · Katani deliveries</span><p><span class="tag ok">Done</span></p><p>Deliveries to <b>Katani</b> are now made on time.</p></div>
-      <div class="box good"><span class="box-label">Closed · Transfer orders</span><p><span class="tag ok">Done</span></p><p>All transfer orders go through the <b>receiving bay</b> with a <b>signed document</b>.</p></div>
-      <div class="box good"><span class="box-label">Closed · Stocktake</span><p><span class="tag ok">Done</span></p><p>Stocktake done at the <b>Syokimau hub</b>, partly solving stock outs at the point of sale.</p></div>
-      <div class="box good"><span class="box-label">Closed · Deli barcodes</span><p><span class="tag ok">Done</span></p><p>Deli products are <b>now scanning</b>.</p></div>
-      <div class="box good"><span class="box-label">Closed · Shelf labels</span><p><span class="tag ok">Done</span></p><p>Shelf labels for <b>wholesale products</b> fixed.</p></div>
+      <div class="box good"><span class="box-label">Closed · Deli marketing</span><p><span class="tag ok">Done</span></p><p>Marketing of <b>deli products</b> is done <b>every day</b>.</p></div>
+      <div class="box good"><span class="box-label">Closed · Corporate onboarding</span><p><span class="tag ok">Done</span></p><p>Marketing and onboarding of <b>corporates, SMEs and institutions</b> complete; now converting leads into customers and closing deals.</p></div>
+      <div class="box good"><span class="box-label">Closed · Deli appliances</span><p><span class="tag ok">Done</span></p><p>Deli appliances are now <b>serviced regularly</b> to keep them in good working condition.</p></div>
     </div>
   </section>
 
@@ -155,83 +157,36 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
     <div class="eyebrow">03 · Still open</div>
     <h2>Pending issues.</h2>
     <ol class="numlist">
-      <li>Previous wholesale codes (bales / boxes) still appearing on the point of sale.</li>
-      <li>Deli sockets are yet to be fixed on higher areas.</li>
-      <li>Clear attire for fire &amp; safety marshals not yet provided.</li>
+      <li>Some products are physically on the shelf but <b>unavailable in the POS</b>, despite the stock take.</li>
+      <li>Signages require regular maintenance.</li>
+      <li>We still do not have a <b>back-up cooler</b> for the pharmacy.</li>
+      <li>Kitchen sockets are yet to be fixed in accessible areas.</li>
     </ol>
   </section>
 
-  <!-- 05 band september -->
+  <!-- 05 band october -->
   <section class="slide band">
     <div class="inner">
-      <div class="eyebrow">Part two · September</div>
-      <div class="bignum">12.0M</div>
-      <h1>September sales: 73% of budget.</h1>
-      <p class="lede">Total sales KSh 12,013,879 against a KSh 16.5M budget and a KSh 19.5M break-even. Three days beat both targets.</p>
+      <div class="eyebrow">Part two · October</div>
+      <div class="bignum">13.32M</div>
+      <h1>October sales: 78% of budget.</h1>
+      <p class="lede">Total sales KSh 13,319,789 against a KSh 17.05M budget and a KSh 19.5M break-even. Six days beat target. 16,744 invoices, Oct 1 to Nov 1.</p>
     </div>
   </section>
 
-  <!-- 06 september detail -->
+  <!-- 06 october detail -->
   <section class="slide tall">
-    <div class="eyebrow">04 · September vs budget vs break-even</div>
-    <h2>The September scorecard.</h2>
-    <div class="grid3">
-      <div class="box"><span class="box-label">Total sales</span><span class="big">12.01M</span><span class="sub">Budget 16.50M · BE 19.50M</span></div>
-      <div class="box"><span class="box-label">Vs budget</span><span class="big">73%</span><span class="sub">Shortfall 4.49M</span><div class="bar"><i style="width:73%"></i></div></div>
-      <div class="box"><span class="box-label">Vs break-even</span><span class="big">62%</span><span class="sub">Shortfall 7.49M</span><div class="bar amber"><i style="width:62%"></i></div></div>
-    </div>
-    <div class="grid3">
-      <div class="box"><span class="box-label">Avg daily sales</span><span class="big">400,463</span><span class="sub">Daily budget 550,000 · BE 650,000</span></div>
-      <div class="box"><span class="box-label">Daily budget gap</span><span class="big">−150k</span><span class="sub">per day on average</span></div>
-      <div class="box"><span class="box-label">Days beating target</span><span class="big">3 days</span><span class="sub">over budget and break-even</span></div>
-    </div>
-    <p class="label">Days that beat target</p>
-    <div class="tablewrap short"><table class="data">
-      <tr><th>Date</th><th class="num">Sales</th><th class="num">vs Budget</th><th class="num">vs BE</th></tr>
-      <tr><td>4 Sep</td><td class="num">863,887</td><td class="num">157%</td><td class="num">133%</td></tr>
-      <tr><td>11 Sep</td><td class="num">1,014,071</td><td class="num">184%</td><td class="num">156%</td></tr>
-      <tr><td>11 Sep</td><td class="num">1,014,071</td><td class="num">184%</td><td class="num">156%</td></tr>
-    </table></div>
-  </section>
-
-  <!-- 07 september departments -->
-  <section class="slide tall">
-    <div class="eyebrow">05 · September · wholesale · pharmacy · liquor · deli · retail</div>
-    <h2>Where September sales came from.</h2>
-    <p class="why">16,102 invoices · Sep 1 to Oct 1, 2026 on the dashboard card.</p>
-    <div class="grid2">
-      <div class="box"><span class="box-label">Wholesale · 31.9%</span><span class="big">3,826,705</span><span class="sub">883 customers · 1,845 transactions</span><div class="bar"><i style="width:31.9%"></i></div><ul class="top3"><li>Mt Kenya Esl 500Ml <span class="amt">197,365</span></li><li>Top Fry 20L <span class="amt">111,100</span></li><li>Sunrice Basmati Rice 5Kg <span class="amt">86,136</span></li></ul></div>
-      <div class="box"><span class="box-label">Pharmacy · 6.8%</span><span class="big">818,117</span><span class="sub">1,096 customers · 1,562 transactions</span><div class="bar"><i style="width:6.8%"></i></div><ul class="top3"><li>Leucovorin 15Mg Tablets 20'S <span class="amt">25,200</span></li><li>Lamictal (Lamotrigine) 100Mg Tablet… <span class="amt">14,400</span></li><li>La Roche Posay Lipikar Baume… <span class="amt">13,650</span></li></ul></div>
-      <div class="box"><span class="box-label">Liquor · 8.5%</span><span class="big">1,018,715</span><span class="sub">738 customers · 899 transactions</span><div class="bar amber"><i style="width:8.5%"></i></div><ul class="top3"><li>Jack Daniel 1L <span class="amt">68,400</span></li><li>John Barr Black 1L <span class="amt">29,900</span></li><li>Jack Daniels 700Ml <span class="amt">27,000</span></li></ul></div>
-      <div class="box"><span class="box-label">Deli / Bakery · 12.8%</span><span class="big">1,539,746</span><span class="sub">7,869 customers · 12,062 transactions</span><div class="bar amber"><i style="width:12.8%"></i></div><ul class="top3"><li>XanaLife Pilau <span class="amt">157,361</span></li><li>XanaLife Chips Per Kg <span class="amt">147,062</span></li><li>XanaLife Beef Stew 1kg <span class="amt">92,592</span></li></ul></div>
-      <div class="box"><span class="box-label">Retail · 40.0%</span><span class="big">4,810,596</span><span class="sub">9,407 customers · 20,297 transactions</span><div class="bar"><i style="width:40.0%"></i></div><ul class="top3"><li>Hanan Tissue 10Pk <span class="amt">108,185</span></li><li>Sunrice Basmati 10Kg <span class="amt">61,320</span></li><li>Mehak Biryani Rice 25kgs <span class="amt">59,250</span></li></ul></div>
-    </div>
-    <p class="note">Retail leads at 40.0%, wholesale follows at 31.9%. Pharmacy is the smallest slice at 6.8%.</p>
-  </section>
-
-  <!-- 08 band october -->
-  <section class="slide band">
-    <div class="inner">
-      <div class="eyebrow">Part three · October to 24th</div>
-      <div class="bignum">10.4M</div>
-      <h1>October to 24th: 63% of budget.</h1>
-      <p class="lede">KSh 10,413,261 with days left to close the gap. Average daily sales 433,886 vs a 550,000 budget and 650,000 break-even.</p>
-    </div>
-  </section>
-
-  <!-- 09 october detail -->
-  <section class="slide tall">
-    <div class="eyebrow">06 · October vs budget vs break-even</div>
+    <div class="eyebrow">04 · October vs budget vs break-even</div>
     <h2>The October scorecard.</h2>
     <div class="grid3">
-      <div class="box"><span class="box-label">Total sales (to 24th)</span><span class="big">10.41M</span><span class="sub">Budget 16.50M · BE 19.50M</span></div>
-      <div class="box"><span class="box-label">Vs budget</span><span class="big">63%</span><span class="sub">Shortfall 6.09M</span><div class="bar"><i style="width:63%"></i></div></div>
-      <div class="box"><span class="box-label">Vs break-even</span><span class="big">53%</span><span class="sub">Shortfall 9.09M</span><div class="bar amber"><i style="width:53%"></i></div></div>
+      <div class="box"><span class="box-label">Total sales</span><span class="big">13.32M</span><span class="sub">Budget 17.05M · BE 19.50M</span></div>
+      <div class="box"><span class="box-label">Vs budget</span><span class="big">78%</span><span class="sub">Shortfall 3,730,211</span><div class="bar"><i style="width:78%"></i></div></div>
+      <div class="box"><span class="box-label">Vs break-even</span><span class="big">68%</span><span class="sub">Shortfall 6,180,211</span><div class="bar amber"><i style="width:68%"></i></div></div>
     </div>
     <div class="grid3">
-      <div class="box"><span class="box-label">Avg daily sales</span><span class="big">433,886</span><span class="sub">Daily budget 550,000 · BE 650,000</span></div>
-      <div class="box"><span class="box-label">Daily budget gap</span><span class="big">−116k</span><span class="sub">per day on average</span></div>
-      <div class="box"><span class="box-label">Days beating target</span><span class="big">4 days</span><span class="sub">over budget and break-even</span></div>
+      <div class="box"><span class="box-label">Avg daily sales</span><span class="big">429,671</span><span class="sub">Daily budget 550,000 · BE 650,000</span></div>
+      <div class="box"><span class="box-label">Daily budget gap</span><span class="big">−120k</span><span class="sub">per day on average</span></div>
+      <div class="box"><span class="box-label">Days beating target</span><span class="big">6 days</span><span class="sub">over budget and break-even</span></div>
     </div>
     <p class="label">Days that beat target</p>
     <div class="tablewrap short"><table class="data">
@@ -239,175 +194,222 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
       <tr><td>2 Oct</td><td class="num">1,138,297</td><td class="num">207%</td><td class="num">175%</td></tr>
       <tr><td>9 Oct</td><td class="num">815,621</td><td class="num">148%</td><td class="num">125%</td></tr>
       <tr><td>16 Oct</td><td class="num">733,237</td><td class="num">133%</td><td class="num">113%</td></tr>
-      <tr><td>16 Oct</td><td class="num">733,237</td><td class="num">133%</td><td class="num">113%</td></tr>
+      <tr><td>23 Oct</td><td class="num">859,698</td><td class="num">156%</td><td class="num">132%</td></tr>
+      <tr><td>24 Oct</td><td class="num">665,283</td><td class="num">121%</td><td class="num">102%</td></tr>
+      <tr><td>30 Oct</td><td class="num">643,135</td><td class="num">117%</td><td class="num">99%</td></tr>
     </table></div>
+    <p class="ref">30 Oct cleared budget but fell just short of break-even.</p>
   </section>
 
-  <!-- 10 october departments -->
+  <!-- 07 october departments -->
   <section class="slide tall">
-    <div class="eyebrow">07 · October · wholesale · pharmacy · liquor · deli · retail</div>
-    <h2>Where October sales come from.</h2>
-    <p class="why">12,763 invoices · Oct 1 to Oct 25, 2026 on the dashboard card.</p>
-    <div class="grid2">
-      <div class="box"><span class="box-label">Wholesale · 39.0%</span><span class="big">4,059,504</span><span class="sub">590 customers · 1,451 transactions</span><div class="bar"><i style="width:39.0%"></i></div><ul class="top3"><li>Ajab All Purpose 2Kg <span class="amt">135,828</span></li><li>Santa Maria Mushroom Whole 720 G <span class="amt">125,670</span></li><li>Mehak Biryani Rice 1kg <span class="amt">124,739</span></li></ul></div>
-      <div class="box"><span class="box-label">Pharmacy · 5.0%</span><span class="big">517,382</span><span class="sub">860 customers · 1,196 transactions</span><div class="bar"><i style="width:5.0%"></i></div><ul class="top3"><li>Lamictal (Lamotrigine) 100Mg Tablet… <span class="amt">14,400</span></li><li>La Roche Posay Anthelios Shaka Flu… <span class="amt">10,800</span></li><li>Nestle Nan 1 400Gm <span class="amt">9,850</span></li></ul></div>
-      <div class="box"><span class="box-label">Liquor · 7.7%</span><span class="big">797,622</span><span class="sub">572 customers · 703 transactions</span><div class="bar amber"><i style="width:7.7%"></i></div><ul class="top3"><li>Jack Daniel 1L <span class="amt">64,600</span></li><li>Jack Daniels 700Ml <span class="amt">54,000</span></li><li>John Barr Black 1L <span class="amt">25,300</span></li></ul></div>
-      <div class="box"><span class="box-label">Deli / Bakery · 12.1%</span><span class="big">1,263,781</span><span class="sub">6,203 customers · 9,490 transactions</span><div class="bar amber"><i style="width:12.1%"></i></div><ul class="top3"><li>XanaLife Pilau <span class="amt">132,753</span></li><li>XanaLife Chips Per Kg <span class="amt">109,904</span></li><li>XanaLife Grilled Chicken Full <span class="amt">105,122</span></li></ul></div>
-      <div class="box"><span class="box-label">Retail · 36.3%</span><span class="big">3,774,973</span><span class="sub">7,686 customers · 16,361 transactions</span><div class="bar"><i style="width:36.3%"></i></div><ul class="top3"><li>Mt Kenya Esl 500Ml <span class="amt">76,428</span></li><li>Sunrice Basmati 10Kg <span class="amt">73,000</span></li><li>Pika Vegetable Oil 10L <span class="amt">45,600</span></li></ul></div>
+    <div class="eyebrow">05 · October · wholesale · pharmacy · liquor · deli · retail</div>
+    <h2>Where October sales came from.</h2>
+    <p class="why">16,744 invoices · Oct 1 to Nov 1, 2026 on the dashboard card.</p>
+    <div class="grid5">
+      <div class="box"><span class="box-label">Wholesale · 37.3%</span><span class="big">4,972,398</span><span class="sub">829 customers · 1,961 transactions</span><div class="bar"><i style="width:37.3%"></i></div><ul class="top3"><li>Mt Kenya Esl 500Ml <span class="amt">162,840</span></li><li>Ajab All Purpose 2Kg <span class="amt">155,208</span></li><li>Mehak Biryani Rice 1kg <span class="amt">141,739</span></li></ul></div>
+      <div class="box"><span class="box-label">Pharmacy · 5.1%</span><span class="big">676,960</span><span class="sub">1,105 customers · 1,545 transactions</span><div class="bar"><i style="width:5.1%"></i></div><ul class="top3"><li>Lamictal (Lamotrigine)100Mg Tablet… <span class="amt">14,400</span></li><li>Nestle Nan 1 400Gm <span class="amt">13,150</span></li><li>Cyclogest 400Mg (Progesterone) Pe… <span class="amt">12,210</span></li></ul></div>
+      <div class="box"><span class="box-label">Liquor · 7.8%</span><span class="big">1,033,600</span><span class="sub">716 customers · 879 transactions</span><div class="bar amber"><i style="width:7.8%"></i></div><ul class="top3"><li>Jack Daniel 1L <span class="amt">91,200</span></li><li>Jack Daniels 700Ml <span class="amt">60,000</span></li><li>John Barr Black 1L <span class="amt">36,800</span></li></ul></div>
+      <div class="box"><span class="box-label">Deli / Bakery · 12.8%</span><span class="big">1,707,304</span><span class="sub">8,237 customers · 12,614 transactions</span><div class="bar amber"><i style="width:12.8%"></i></div><ul class="top3"><li>XanaLife Pilau <span class="amt">174,907</span></li><li>XanaLife Chips Per Kg <span class="amt">144,881</span></li><li>XanaLife Grilled Chicken Full <span class="amt">137,322</span></li></ul></div>
+      <div class="box"><span class="box-label">Retail · 37.0%</span><span class="big">4,929,526</span><span class="sub">10,037 customers · 21,441 transactions</span><div class="bar"><i style="width:37.0%"></i></div><ul class="top3"><li>Sunrice Basmati 10Kg <span class="amt">102,200</span></li><li>Mt Kenya Esl 500Ml <span class="amt">80,272</span></li><li>Hanan Tissue 10Pk <span class="amt">60,475</span></li></ul></div>
     </div>
-    <p class="note">Wholesale is back on top at 39.0% while retail eases to 36.3%. Pharmacy drops to 5.0%.</p>
+    <p class="note">Wholesale and retail carry the month almost equally at 37.3% and 37.0%. Pharmacy is the smallest slice at 5.1%.</p>
   </section>
 
-  <!-- 11 top skus -->
+  <!-- 08 band november -->
+  <section class="slide band">
+    <div class="inner">
+      <div class="eyebrow">Part three · November to 21st</div>
+      <div class="bignum">9.06M</div>
+      <h1>November to 21st: 46% of budget.</h1>
+      <p class="lede">KSh 9,057,499 with the festive run still ahead. Average daily sales 431,309 against a 650,000 daily target. 12,239 invoices.</p>
+    </div>
+  </section>
+
+  <!-- 09 november detail -->
   <section class="slide tall">
-    <div class="eyebrow">08 · Syokimau · best sellers · October to 24th</div>
-    <h2>Top 20 best-selling SKUs.</h2>
-    <p class="why">Cooking essentials and our own deli lines lead. These should <b>never be out of stock</b>.</p>
-    <div class="tablewrap"><table class="data">
-      <tr><th>SKU</th><th class="num">Qty</th><th class="num">Amount</th></tr>
-      <tr class="lead"><td>Mt Kenya Esl 500Ml</td><td class="num">2,927</td><td class="num">176,462</td></tr>
-      <tr><td>Ajab All Purpose 2Kg</td><td class="num">834</td><td class="num">153,768</td></tr>
-      <tr><td>Top Fry 20L</td><td class="num">25</td><td class="num">138,875</td></tr>
-      <tr><td>XanaLife Pilau</td><td class="num">265</td><td class="num">132,753</td></tr>
-      <tr><td>Mehak Biryani Rice 1kg</td><td class="num">1,231</td><td class="num">127,049</td></tr>
-      <tr><td>Santa Maria Mushroom Whole 720 G</td><td class="num">213</td><td class="num">125,670</td></tr>
-      <tr><td>Brown Sugar 1Kg From 10Kg</td><td class="num">896</td><td class="num">123,103</td></tr>
-      <tr><td>Fresh Fri 20L</td><td class="num">21</td><td class="num">122,400</td></tr>
-      <tr><td>XanaLife Chips Per Kg</td><td class="num">276</td><td class="num">109,904</td></tr>
-      <tr><td>XanaLife Grilled Chicken Full</td><td class="num">131</td><td class="num">105,122</td></tr>
-      <tr><td>Moto Sawa 5L</td><td class="num">71</td><td class="num">102,950</td></tr>
-      <tr><td>Mehak Biryani Rice 25kgs</td><td class="num">36</td><td class="num">90,000</td></tr>
-      <tr><td>Tuzo Esl 450Ml</td><td class="num">1,258</td><td class="num">87,531</td></tr>
-      <tr><td>Hanan Tissue 1Pk</td><td class="num">1,829</td><td class="num">82,970</td></tr>
-      <tr><td>XanaLife Beef Stew 1kg</td><td class="num">64</td><td class="num">77,119</td></tr>
-      <tr><td>Sunrice Basmati 10Kg</td><td class="num">25</td><td class="num">73,000</td></tr>
-      <tr><td>Brookside Fino 500Ml</td><td class="num">815</td><td class="num">65,056</td></tr>
-      <tr><td>Jack Daniel 1L</td><td class="num">17</td><td class="num">64,600</td></tr>
-      <tr><td>Raha Maize Meal 2Kg</td><td class="num">320</td><td class="num">61,602</td></tr>
-      <tr><td>XanaLife Samosa</td><td class="num">1,221</td><td class="num">59,915</td></tr>
-      <tr><td>XanaLife Chapati</td><td class="num">1,993</td><td class="num">59,780</td></tr>
+    <div class="eyebrow">06 · November vs budget vs break-even · up to 21st</div>
+    <h2>The November scorecard.</h2>
+    <div class="grid3">
+      <div class="box"><span class="box-label">Total sales (to 21st)</span><span class="big">9.06M</span><span class="sub">Budget 19.50M · BE 19.50M</span></div>
+      <div class="box"><span class="box-label">Vs budget</span><span class="big">46%</span><span class="sub">Shortfall 10,442,501</span><div class="bar"><i style="width:46%"></i></div></div>
+      <div class="box"><span class="box-label">Vs break-even</span><span class="big">46%</span><span class="sub">Same 19.50M target this month</span><div class="bar amber"><i style="width:46%"></i></div></div>
+    </div>
+    <div class="grid3">
+      <div class="box"><span class="box-label">Avg daily sales</span><span class="big">431,309</span><span class="sub">Daily budget 650,000 · BE 650,000</span></div>
+      <div class="box"><span class="box-label">Daily target gap</span><span class="big">−219k</span><span class="sub">per day on average</span></div>
+      <div class="box"><span class="box-label">Days beating target</span><span class="big">2 days</span><span class="sub">over the 650,000 target</span></div>
+    </div>
+    <p class="label">Days that beat target</p>
+    <div class="tablewrap short"><table class="data">
+      <tr><th>Date</th><th class="num">Sales</th><th class="num">Target</th><th class="num">%</th></tr>
+      <tr><td>1 Nov</td><td class="num">791,394</td><td class="num">650,000</td><td class="num">122%</td></tr>
+      <tr><td>6 Nov</td><td class="num">799,060</td><td class="num">650,000</td><td class="num">123%</td></tr>
     </table></div>
-    <p class="ref">Source deck lists 21 rows under Top 20; all shown.</p>
+    <p class="ref">Budget and break-even are the same 650,000 a day in November.</p>
   </section>
 
-  <!-- 12 band katani -->
+  <!-- 10 november departments -->
+  <section class="slide tall">
+    <div class="eyebrow">07 · November · wholesale · pharmacy · liquor · deli · retail</div>
+    <h2>Where November sales come from.</h2>
+    <p class="why">12,239 invoices · Nov 1 to 21, 2026 on the dashboard card.</p>
+    <div class="grid5">
+      <div class="box"><span class="box-label">Wholesale · 33.8%</span><span class="big">3,062,846</span><span class="sub">771 customers · 1,611 transactions</span><div class="bar"><i style="width:33.8%"></i></div><ul class="top3"><li>Mt Kenya Esl 500Ml <span class="amt">416,067</span></li><li>Rina 20L <span class="amt">114,000</span></li><li>210 Maize 10Kg <span class="amt">96,040</span></li></ul></div>
+      <div class="box"><span class="box-label">Pharmacy · 5.1%</span><span class="big">461,883</span><span class="sub">790 customers · 1,075 transactions</span><div class="bar"><i style="width:5.1%"></i></div><ul class="top3"><li>Leucovorin 15Mg Tablets 20'S <span class="amt">17,468</span></li><li>Natural Factors Magnesium Bisglyci… <span class="amt">8,000</span></li><li>Omron BP Machine M2+ <span class="amt">8,000</span></li></ul></div>
+      <div class="box"><span class="box-label">Liquor · 7.6%</span><span class="big">692,124</span><span class="sub">500 customers · 607 transactions</span><div class="bar amber"><i style="width:7.6%"></i></div><ul class="top3"><li>Jack Daniel 1L <span class="amt">53,200</span></li><li>Jack Daniels 700Ml <span class="amt">27,000</span></li><li>John Barr Black 1L <span class="amt">25,300</span></li></ul></div>
+      <div class="box"><span class="box-label">Deli / Bakery · 15.0%</span><span class="big">1,356,325</span><span class="sub">6,411 customers · 9,950 transactions</span><div class="bar amber"><i style="width:15.0%"></i></div><ul class="top3"><li>XanaLife Pilau <span class="amt">133,169</span></li><li>XanaLife Chips Per Kg <span class="amt">105,311</span></li><li>XanaLife Grilled Chicken Full <span class="amt">97,790</span></li></ul></div>
+      <div class="box"><span class="box-label">Retail · 38.5%</span><span class="big">3,484,322</span><span class="sub">6,913 customers · 14,684 transactions</span><div class="bar"><i style="width:38.5%"></i></div><ul class="top3"><li>Sunrice Basmati 10Kg <span class="amt">70,080</span></li><li>Hanan Tissue 10Pk <span class="amt">58,340</span></li><li>Fresh Fri Cooking Oil 10 Ltrs <span class="amt">56,500</span></li></ul></div>
+    </div>
+    <p class="note">Retail leads at 38.5%. Deli climbs to 15.0% while wholesale eases to 33.8%.</p>
+  </section>
+
+  <!-- 11 band katani october -->
   <section class="slide band">
     <div class="inner">
       <div class="eyebrow">Part four · Katani</div>
-      <div class="bignum">1.07M</div>
-      <h1>Katani September: 72% of budget.</h1>
-      <p class="lede">KSh 1,073,556 against a KSh 1.5M budget and a KSh 1.7M break-even. October to 24th: KSh 868,079, 58% of budget.</p>
+      <div class="bignum">1.44M</div>
+      <h1>Katani October: 96% of budget.</h1>
+      <p class="lede">KSh 1,443,224 — minimatt 1,077,567 plus pharmacy 365,657 — against a KSh 1.5M budget and a KSh 1.7M break-even. 4,426 invoices.</p>
     </div>
   </section>
 
-  <!-- 13 katani september -->
+  <!-- 12 katani october detail -->
   <section class="slide tall">
-    <div class="eyebrow">09 · Katani · September vs budget vs break-even</div>
-    <h2>Katani September scorecard.</h2>
-    <p class="why">Wholesale / retail · 3,618 customers · 7,066 transactions.</p>
+    <div class="eyebrow">08 · Katani minimatt + pharmacy · October</div>
+    <h2>Katani October scorecard.</h2>
     <div class="grid3">
-      <div class="box"><span class="box-label">Total sales</span><span class="big">1.07M</span><span class="sub">Budget 1.50M · BE 1.70M</span></div>
-      <div class="box"><span class="box-label">Vs budget</span><span class="big">72%</span><span class="sub">Shortfall 426,444</span><div class="bar"><i style="width:72%"></i></div></div>
-      <div class="box"><span class="box-label">Vs break-even</span><span class="big">63%</span><span class="sub">Shortfall 626,444</span><div class="bar amber"><i style="width:63%"></i></div></div>
+      <div class="box"><span class="box-label">Total sales</span><span class="big">1.44M</span><span class="sub">Budget 1.50M · BE 1.70M</span></div>
+      <div class="box"><span class="box-label">Vs budget</span><span class="big">96%</span><span class="sub">Shortfall 56,776</span><div class="bar"><i style="width:96%"></i></div></div>
+      <div class="box"><span class="box-label">Vs break-even</span><span class="big">85%</span><span class="sub">Shortfall 256,776</span><div class="bar amber"><i style="width:85%"></i></div></div>
     </div>
     <div class="grid3">
-      <div class="box"><span class="box-label">Avg daily sales</span><span class="big">44,732</span><span class="sub">Daily budget 50,000 · BE 57,000</span></div>
-      <div class="box"><span class="box-label">Daily budget gap</span><span class="big">−5k</span><span class="sub">per day on average</span></div>
-      <div class="box"><span class="box-label">Katani pharmacy</span><span class="big">386,073</span><span class="sub">September sales</span></div>
+      <div class="box"><span class="box-label">Avg daily sales</span><span class="big">46,556</span><span class="sub">Daily budget 50,000 · BE 57,000</span></div>
+      <div class="box"><span class="box-label">Daily budget gap</span><span class="big">−3k</span><span class="sub">per day on average</span></div>
+      <div class="box"><span class="box-label">Pharmacy share</span><span class="big">25.3%</span><span class="sub">365,657 of 1,443,224</span></div>
     </div>
+    <p class="label">How the 1,443,224 is made up</p>
+    <div class="tablewrap short"><table class="data">
+      <tr><th>Department</th><th class="num">Sales</th></tr>
+      <tr><td>Katani minimatt · wholesale / retail</td><td class="num">1,077,567</td></tr>
+      <tr><td>Katani pharmacy</td><td class="num">365,657</td></tr>
+      <tr class="total"><td>Grand total</td><td class="num">1,443,224</td></tr>
+    </table></div>
   </section>
 
-  <!-- katani september departments -->
+  <!-- 13 katani october departments -->
   <section class="slide tall">
-    <div class="eyebrow">10 · Katani · September · wholesale / retail · pharmacy</div>
-    <h2>Where Katani September sales came from.</h2>
-    <p class="why">Total KSh 1,459,629 across both departments.</p>
+    <div class="eyebrow">09 · Katani · October · wholesale / retail · pharmacy</div>
+    <h2>Where Katani October sales came from.</h2>
+    <p class="why">4,426 invoices · 4,426 customers · 8,583 transactions on the Katani card.</p>
     <div class="grid2">
-      <div class="box"><span class="box-label">Wholesale / Retail · 73.6%</span><span class="big">1,073,556</span><span class="sub">3,618 customers · 7,066 transactions</span><div class="bar"><i style="width:73.6%"></i></div><ul class="top3"><li>Mt Kenya Esl 500Ml <span class="amt">45,538</span></li><li>XanaLife Sweet Bread 800 G <span class="amt">23,760</span></li><li>XanaLife White Bread 800 G <span class="amt">23,230</span></li></ul></div>
-      <div class="box"><span class="box-label">Pharmacy · 26.4%</span><span class="big">386,073</span><span class="sub">Katani pharmacy</span><div class="bar"><i style="width:26.4%"></i></div></div>
+      <div class="box"><span class="box-label">Wholesale / Retail · 74.7%</span><span class="big">1,077,567</span><span class="sub">4,426 customers · 8,583 transactions</span><div class="bar"><i style="width:74.7%"></i></div><ul class="top3"><li>XanaLife Sweet Bread 800 G <span class="amt">27,720</span></li><li>Mt Kenya Esl 500Ml <span class="amt">24,892</span></li><li>XanaLife White Bread 400 G <span class="amt">21,725</span></li></ul></div>
+      <div class="box"><span class="box-label">Pharmacy · 25.3%</span><span class="big">365,657</span><span class="sub">Katani pharmacy</span><div class="bar"><i style="width:25.3%"></i></div></div>
     </div>
     <p class="note">Wholesale / retail carries about three-quarters of Katani. Pharmacy brings in the other quarter.</p>
   </section>
 
-  <!-- 14 katani october -->
-  <section class="slide tall">
-    <div class="eyebrow">11 · Katani · October vs budget vs break-even</div>
-    <h2>Katani October scorecard.</h2>
-    <p class="why">Up to 24th · wholesale / retail · 3,429 customers · 6,729 transactions.</p>
-    <div class="grid3">
-      <div class="box"><span class="box-label">Total sales (to 24th)</span><span class="big">868,079</span><span class="sub">Budget 1.50M · BE 1.70M</span></div>
-      <div class="box"><span class="box-label">Vs budget</span><span class="big">58%</span><span class="sub">Shortfall 631,921</span><div class="bar"><i style="width:58%"></i></div></div>
-      <div class="box"><span class="box-label">Vs break-even</span><span class="big">51%</span><span class="sub">Shortfall 831,921</span><div class="bar amber"><i style="width:51%"></i></div></div>
-    </div>
-    <div class="grid3">
-      <div class="box"><span class="box-label">Avg daily sales</span><span class="big">36,170</span><span class="sub">Daily budget 50,000 · BE 57,000</span></div>
-      <div class="box"><span class="box-label">Daily budget gap</span><span class="big">−14k</span><span class="sub">per day on average</span></div>
-      <div class="box"><span class="box-label">Katani pharmacy</span><span class="big">294,577</span><span class="sub">October sales to 24th</span></div>
+  <!-- 14 band katani november -->
+  <section class="slide band">
+    <div class="inner">
+      <div class="eyebrow">Part five · Katani November to 21st</div>
+      <div class="bignum">1.07M</div>
+      <h1>Katani November to 21st: 71% of budget.</h1>
+      <p class="lede">KSh 1,066,914 — minimatt 808,256 plus pharmacy 258,658 — against a KSh 1.5M budget and a KSh 1.7M break-even. 2,981 invoices.</p>
     </div>
   </section>
 
-  <!-- katani october departments -->
+  <!-- 15 katani november detail -->
   <section class="slide tall">
-    <div class="eyebrow">12 · Katani · October to 24th · wholesale / retail · pharmacy</div>
-    <h2>Where Katani October sales came from.</h2>
-    <p class="why">Total KSh 1,162,656 across both departments.</p>
-    <div class="grid2">
-      <div class="box"><span class="box-label">Wholesale / Retail · 74.7%</span><span class="big">868,079</span><span class="sub">3,429 customers · 6,729 transactions</span><div class="bar"><i style="width:74.7%"></i></div><ul class="top3"><li>Mt Kenya Esl 500Ml <span class="amt">24,892</span></li><li>XanaLife Sweet Bread 800 G <span class="amt">20,880</span></li><li>XanaLife White Bread 800 G <span class="amt">18,400</span></li></ul></div>
-      <div class="box"><span class="box-label">Pharmacy · 25.3%</span><span class="big">294,577</span><span class="sub">Katani pharmacy</span><div class="bar"><i style="width:25.3%"></i></div></div>
+    <div class="eyebrow">10 · Katani minimatt + pharmacy · November to 21st</div>
+    <h2>Katani November scorecard.</h2>
+    <div class="grid3">
+      <div class="box"><span class="box-label">Total sales (to 21st)</span><span class="big">1.07M</span><span class="sub">Budget 1.50M · BE 1.70M</span></div>
+      <div class="box"><span class="box-label">Vs budget</span><span class="big">71%</span><span class="sub">Shortfall 433,086</span><div class="bar"><i style="width:71%"></i></div></div>
+      <div class="box"><span class="box-label">Vs break-even</span><span class="big">63%</span><span class="sub">Shortfall 633,086</span><div class="bar amber"><i style="width:63%"></i></div></div>
     </div>
-    <p class="note">The same split holds in October: about three-quarters wholesale / retail, one quarter pharmacy.</p>
-  </section>
-
-  <!-- 15 katani top skus -->
-  <section class="slide tall">
-    <div class="eyebrow">13 · Katani · best sellers · October to 24th</div>
-    <h2>Katani top 20 best-selling SKUs.</h2>
-    <p class="why">Milk and our own bread lead. Keep the bakery deliveries to Katani <b>on time</b>.</p>
-    <div class="tablewrap"><table class="data">
-      <tr><th>SKU</th><th class="num">Qty</th><th class="num">Amount</th></tr>
-      <tr class="lead"><td>Mt Kenya Esl 500Ml</td><td class="num">416</td><td class="num">24,892</td></tr>
-      <tr><td>XanaLife Sweet Bread 800 G</td><td class="num">174</td><td class="num">20,880</td></tr>
-      <tr><td>XanaLife White Bread 800 G</td><td class="num">160</td><td class="num">18,400</td></tr>
-      <tr><td>XanaLife White Bread 400 G</td><td class="num">322</td><td class="num">17,710</td></tr>
-      <tr><td>XanaLife Sweet Bread 400 G</td><td class="num">256</td><td class="num">15,360</td></tr>
-      <tr><td>Ajab All Purpose 2Kg</td><td class="num">81</td><td class="num">15,115</td></tr>
-      <tr><td>Tupike Maize Flour 2kg</td><td class="num">106</td><td class="num">14,172</td></tr>
-      <tr><td>Brown Sugar 1Kg From 10Kg</td><td class="num">88.5</td><td class="num">12,743</td></tr>
-      <tr><td>Mt Kenya Fino 500Ml</td><td class="num">167</td><td class="num">10,174</td></tr>
-      <tr><td>XanaLife Eggs Packed 15</td><td class="num">32</td><td class="num">8,940</td></tr>
-      <tr><td>XanaLife Eggs Packed 30</td><td class="num">17</td><td class="num">8,890</td></tr>
-      <tr><td>Top Fry 10L</td><td class="num">3</td><td class="num">8,370</td></tr>
-      <tr><td>XanaLife Brown Bread 800 G</td><td class="num">70</td><td class="num">8,050</td></tr>
-      <tr><td>XanaLife Mandazi</td><td class="num">391</td><td class="num">7,820</td></tr>
-      <tr><td>Fc Beef Smokies Labless 1Kg</td><td class="num">13</td><td class="num">7,800</td></tr>
-      <tr><td>Cocacola 2L</td><td class="num">40</td><td class="num">7,600</td></tr>
-      <tr><td>XanaLife Vanilla Block</td><td class="num">38</td><td class="num">7,600</td></tr>
-      <tr><td>Brookside Lala Sweetened 1L</td><td class="num">33</td><td class="num">7,260</td></tr>
-      <tr><td>Fresh Fri Cooking Oil 1Lt</td><td class="num">20</td><td class="num">6,776</td></tr>
-      <tr><td>XanaLife White Bread 600 G</td><td class="num">74</td><td class="num">6,660</td></tr>
-      <tr><td>Kabras 2Kg</td><td class="num">19</td><td class="num">6,270</td></tr>
+    <div class="grid3">
+      <div class="box"><span class="box-label">Avg daily sales</span><span class="big">34,417</span><span class="sub">Daily budget 50,000 · BE 57,000</span></div>
+      <div class="box"><span class="box-label">Daily budget gap</span><span class="big">−16k</span><span class="sub">per day on average</span></div>
+      <div class="box"><span class="box-label">Pharmacy share</span><span class="big">24.2%</span><span class="sub">258,658 of 1,066,914</span></div>
+    </div>
+    <p class="label">How the 1,066,914 is made up</p>
+    <div class="tablewrap short"><table class="data">
+      <tr><th>Department</th><th class="num">Sales</th></tr>
+      <tr><td>Katani minimatt · wholesale / retail</td><td class="num">808,256</td></tr>
+      <tr><td>Katani pharmacy</td><td class="num">258,658</td></tr>
+      <tr class="total"><td>Grand total</td><td class="num">1,066,914</td></tr>
     </table></div>
-    <p class="ref">Source deck lists 21 rows under Top 20; all shown. Amounts rounded to the shilling.</p>
   </section>
 
-  <!-- 15 conclusion -->
+  <!-- 16 katani november departments -->
   <section class="slide tall">
-    <div class="eyebrow">14 · Conclusion</div>
+    <div class="eyebrow">11 · Katani · November to 21st · wholesale / retail · pharmacy</div>
+    <h2>Where Katani November sales came from.</h2>
+    <p class="why">2,981 invoices · 2,981 customers · 5,897 transactions on the Katani card.</p>
+    <div class="grid2">
+      <div class="box"><span class="box-label">Wholesale / Retail · 75.8%</span><span class="big">808,256</span><span class="sub">2,981 customers · 5,897 transactions</span><div class="bar"><i style="width:75.8%"></i></div><ul class="top3"><li>Mt Kenya Esl 500Ml <span class="amt">59,475</span></li><li>XanaLife White Bread 800 G <span class="amt">25,530</span></li><li>XanaLife Sweet Bread 800 G <span class="amt">17,340</span></li></ul></div>
+      <div class="box"><span class="box-label">Pharmacy · 24.2%</span><span class="big">258,658</span><span class="sub">Katani pharmacy</span><div class="bar"><i style="width:24.2%"></i></div></div>
+    </div>
+    <p class="note">The same split holds in November: about three-quarters wholesale / retail, one quarter pharmacy.</p>
+  </section>
+
+  <!-- 17 deli new listings -->
+  <section class="slide tall">
+    <div class="eyebrow">12 · Deli / Bakery · new listing sales · October and November</div>
+    <h2>The new deli lines.</h2>
+    <p class="why">21 new lines across October and November. <b>XanaLife Bites</b> alone moves 903 packs.</p>
+    <div class="tables2">
+      <div class="tablewrap"><table class="data">
+        <tr><th>Deli / bakery new listing</th><th class="num">Qty</th><th class="num">Amount</th></tr>
+        <tr class="lead"><td>XanaLife Bites Pkt</td><td class="num">903</td><td class="num">49,665</td></tr>
+        <tr><td>XanaLife Beef Choma Sausages Pc</td><td class="num">294</td><td class="num">22,050</td></tr>
+        <tr><td>XanaLife Platter 1</td><td class="num">6</td><td class="num">11,994</td></tr>
+        <tr><td>XanaLife Fruit Block 500Gm</td><td class="num">48</td><td class="num">11,800</td></tr>
+        <tr><td>XanaLife Vanilla Cookies 200G</td><td class="num">120</td><td class="num">10,400</td></tr>
+        <tr><td>XanaLife Carrot Loaf 400Gm</td><td class="num">43</td><td class="num">9,460</td></tr>
+        <tr><td>XanaLife Chocolate Chip Muffins 6Pk</td><td class="num">45</td><td class="num">9,410</td></tr>
+        <tr><td>XanaLife Ginger Cookies 200G</td><td class="num">113</td><td class="num">8,807</td></tr>
+        <tr><td>XanaLife Chocolate Cookies 200G</td><td class="num">104</td><td class="num">8,436</td></tr>
+        <tr><td>XanaLife Marble Block 500Gm</td><td class="num">37</td><td class="num">8,410</td></tr>
+        <tr><td>XanaLife Banana Muffin 6Pk</td><td class="num">34</td><td class="num">7,140</td></tr>
+      </table></div>
+      <div class="tablewrap"><table class="data">
+        <tr><th>Deli / bakery new listing</th><th class="num">Qty</th><th class="num">Amount</th></tr>
+        <tr><td>XanaLife Hungarian Pc</td><td class="num">155</td><td class="num">6,975</td></tr>
+        <tr><td>XanaLife Banana Block</td><td class="num">22</td><td class="num">4,880</td></tr>
+        <tr><td>XanaLife Hot Dog Pc</td><td class="num">32</td><td class="num">3,840</td></tr>
+        <tr><td>XanaLife 6 Wings</td><td class="num">7</td><td class="num">2,700</td></tr>
+        <tr><td>XanaLife Carrot Muffin 6Pk</td><td class="num">10</td><td class="num">2,100</td></tr>
+        <tr><td>XanaLife Donny Brioche Bread 400Gm</td><td class="num">17</td><td class="num">1,530</td></tr>
+        <tr><td>XanaLife Chocolate Dips 1Pc 60G</td><td class="num">19</td><td class="num">1,030</td></tr>
+        <tr><td>XanaLife Bread Crumbs 1Kg</td><td class="num">23</td><td class="num">669</td></tr>
+        <tr><td>XanaLife Carrot Muffins 6Pk</td><td class="num">3</td><td class="num">630</td></tr>
+        <tr><td>XanaLife 4 Wings</td><td class="num">1</td><td class="num">150</td></tr>
+        <tr class="total"><td>Grand total</td><td class="num">2,035</td><td class="num">182,076</td></tr>
+      </table></div>
+    </div>
+    <p class="ref">Deck grand total reads 2,035 packs; the listed rows add to 2,036. Amounts as listed in the deck.</p>
+  </section>
+
+  <!-- 18 conclusion -->
+  <section class="slide tall">
+    <div class="eyebrow">13 · Conclusion</div>
     <h2>What we agree before leaving.</h2>
     <ol class="numlist">
-      <li><b>Work on our system</b>: customers are getting frustrated.</li>
-      <li><b>Be consistent</b> in marketing and corporate engagements.</li>
-      <li><b>Deeper offers</b> and a check on pricing.</li>
-      <li><b>Expand</b> our revenue centres.</li>
-      <li><b>Best customer service.</b></li>
+      <li><b>Work on our system</b> because customers are getting frustrated.</li>
+      <li><b>Put our foot forward</b> towards the festive season.</li>
+      <li><b>Work on pricing</b> from the stock controller department so that we can be more competitive.</li>
+      <li><b>Shelve our wholesales</b> for better visibility.</li>
+      <li><b>Customer service.</b></li>
     </ol>
   </section>
 
-  <!-- 16 close -->
+  <!-- 19 close -->
   <section class="slide band">
     <div class="inner">
       <img class="logo" alt="XanaLife, Every Day Better" src="xana-logo.png">
-      <div class="eyebrow">XanaLife Syokimau · October 2026</div>
+      <div class="eyebrow">XanaLife Syokimau · November 2026</div>
       <h1>Thank you.</h1>
       <p class="lede">Prepared by Titoh / Mwadime.</p>
       <p class="ref" style="color:rgba(244,248,245,.55)">Internal use · figures as presented in the monthly meeting deck</p>
@@ -430,10 +432,16 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   var slides=Array.prototype.slice.call(document.querySelectorAll(".slide"));
   var counter=document.getElementById("counter"),bar=document.getElementById("progress");
   var prevBtn=document.getElementById("prev"),nextBtn=document.getElementById("next");
-  document.querySelectorAll(".pointlist,.numlist,.grid2,.grid3").forEach(function(list){
+  document.querySelectorAll(".pointlist,.numlist,.grid2,.grid3,.grid5").forEach(function(list){
     Array.prototype.forEach.call(list.children,function(child,idx){child.style.setProperty("--n",idx)});
   });
   var i=0,step=0,lastIndex=0;
+  function hashIndex(){
+    var m=/^#(\d+)$/.exec(location.hash||"");
+    if(!m)return null;
+    var n=parseInt(m[1],10);
+    return n>=1&&n<=slides.length?n-1:null;
+  }
   function stepsOn(s){return parseInt(s.getAttribute("data-steps")||"0",10)}
   function revealIntoView(slide){
     var blocks=slide.querySelectorAll(".reveal.shown");if(!blocks.length)return;
@@ -458,6 +466,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
     var p=cur.querySelector("[data-prompt]");if(p)p.classList.toggle("hidden",step>=stepsOn(cur));
     counter.textContent=(i+1)+" / "+slides.length;
     bar.style.width=((i+1)/slides.length*100)+"%";
+    try{history.replaceState(null,"","#"+ (i+1))}catch(e){}
     prevBtn.disabled=(i===0&&step===0);
     nextBtn.disabled=(i===slides.length-1&&step>=stepsOn(slides[i]));
     if(step>0)revealIntoView(cur);else if(moved)window.scrollTo(0,0);
@@ -478,6 +487,11 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
     if(tx===null)return;var dx=e.changedTouches[0].clientX-tx;tx=null;
     if(Math.abs(dx)<48)return;if(dx<0)fwd();else back();
   },{passive:true});
+  window.addEventListener("hashchange",function(){
+    var n=hashIndex();if(n===null||n===i)return;i=n;step=0;render();
+  });
+  var start=hashIndex();
+  if(start!==null)i=start;
   render();
 })();
 </script>
