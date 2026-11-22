@@ -12,47 +12,51 @@
   :root{
   --paper:#FDFDFB; --ink:#0F1E19; --ink-soft:#55655E; --hairline:#DCE2DE;
   --navy:#0F3057; --navy-deep:#0A2340; --green:#1F7B4A; --amber:#E8A33D;
-  --alert:#B3341F; --onband:#F4F8F5; --fill:#8A9891; --shade:#F2F5F2;
+  --alert:#B3341F; --onband:#F4F8F5; --fill:#64736C; --shade:#F2F5F2;
   --sans:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
   --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
-}
+  color-scheme:light;
+  }
 *{box-sizing:border-box}
+html{scrollbar-color:#C6D0CA transparent;scrollbar-width:thin}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:#CFE6D8;color:var(--ink)}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.band :focus-visible{outline-color:var(--amber)}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#C6D0CA;border:3px solid var(--paper);border-radius:99px}
+::-webkit-scrollbar-thumb:hover{background:#A9B7AE}
 .stage{position:relative;min-height:100vh;display:flex;flex-direction:column;overflow-x:clip}
 .slide{display:none;flex:1;padding:28px 20px 120px;min-height:100vh;flex-direction:column;justify-content:center;gap:18px;max-width:1180px;margin:0 auto;width:100%}
-.slide.is-current{display:flex}
-  .slide.is-current{animation:slideIn .32s ease-out}
-  .stage[data-dir="fwd"] .slide.is-current{--sx:24px}
-  .stage[data-dir="back"] .slide.is-current{--sx:-24px}
-  @keyframes slideIn{from{opacity:0;transform:translateX(var(--sx,24px))}to{opacity:1;transform:none}}
-  .slide.is-current .pointlist li,.slide.is-current .numlist li,.slide.is-current .grid2>*,.slide.is-current .grid3>*,.slide.is-current .grid5>*{animation:listIn .34s ease-out backwards;animation-delay:calc(var(--n,0)*40ms)}
-  @keyframes listIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-  .slide.is-current .bar i{animation:grow .6s ease-out backwards;transform-origin:left center}
-  @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.slide:focus{outline:none}
+.slide.is-current{display:flex;animation:slideIn .42s cubic-bezier(.16,1,.3,1) both}
+.stage[data-dir="fwd"] .slide.is-current{--sx:24px}
+.stage[data-dir="back"] .slide.is-current{--sx:-24px}
+@keyframes slideIn{from{opacity:0;transform:translate3d(var(--sx,24px),10px,0)}to{opacity:1;transform:none}}
+.slide.is-current .pointlist li,.slide.is-current .numlist li,.slide.is-current .grid2>*,.slide.is-current .grid3>*,.slide.is-current .grid5>*{animation:listIn .4s cubic-bezier(.16,1,.3,1) backwards;animation-delay:calc(var(--n,0)*35ms)}
+@keyframes listIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.slide.is-current .bar i{animation:grow .6s cubic-bezier(.16,1,.3,1) backwards;transform-origin:left center}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .slide.tall{justify-content:flex-start;padding-top:36px}
 .slide.band{background:var(--navy-deep);color:var(--onband);max-width:none}
 .slide.band .inner{max-width:1180px;margin:0 auto;width:100%;display:flex;flex-direction:column;gap:16px}
 .logo{display:block;height:56px;width:auto;align-self:flex-start;object-fit:contain;background:#fff;padding:8px 12px;border-radius:4px;margin-bottom:6px}
-.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
-.band .eyebrow{color:var(--amber)}
 h1{font-size:clamp(36px,9vw,78px);font-weight:900;letter-spacing:-.032em;line-height:.98;margin:0;text-wrap:balance}
 h2{font-size:clamp(28px,7vw,54px);font-weight:800;letter-spacing:-.028em;line-height:1.03;margin:0;text-wrap:balance}
-h3{font-size:clamp(19px,4.5vw,26px);font-weight:800;letter-spacing:-.016em;margin:0}
-.lede,.story{font-family:var(--serif);line-height:1.52;margin:0;max-width:60ch}
-.lede{font-size:clamp(17px,4.4vw,22px);color:var(--ink-soft)}
-.band .lede{color:rgba(244,248,245,.82)}
-.story{font-size:clamp(18px,4.6vw,25px)}
-.why{font-size:clamp(15px,4vw,18px);color:var(--ink-soft);line-height:1.5;max-width:64ch;margin:0}
+.lede{font-family:var(--serif);line-height:1.52;margin:0;max-width:60ch;font-size:clamp(17px,4.4vw,22px);color:var(--ink-soft);text-wrap:pretty}
+.band .lede{color:rgba(244,248,245,.86)}
+.why{font-size:clamp(15px,4vw,18px);color:var(--ink-soft);line-height:1.5;max-width:64ch;margin:0;text-wrap:pretty}
 .why b{color:var(--ink)}
 .label{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin:0}
-.ref{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fill);margin:0}
+.ref{font-size:12px;font-weight:500;letter-spacing:.01em;color:var(--fill);margin:0;text-wrap:pretty}
+.band .ref{color:rgba(244,248,245,.75)}
+.meta{font-size:12px;font-weight:600;letter-spacing:.04em;color:rgba(244,248,245,.86);margin:0}
 .bignum{font-size:clamp(52px,14vw,110px);font-weight:900;line-height:.9;letter-spacing:-.05em;color:var(--green);font-variant-numeric:tabular-nums}
 .band .bignum{color:var(--amber)}
 .pointlist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;max-width:68ch}
 .pointlist li{position:relative;padding-left:34px;font-size:clamp(16px,4.4vw,20px);line-height:1.45}
 .pointlist li::before{content:"";position:absolute;left:0;top:.52em;width:10px;height:10px;background:var(--green);border-radius:50%}
-.band .pointlist li::before{background:var(--amber)}
-.pointlist.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px 30px;max-width:none}
 .numlist{list-style:none;counter-reset:n;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;max-width:74ch}
 .numlist li{counter-increment:n;position:relative;padding-left:44px;font-size:clamp(15px,4.2vw,19px);line-height:1.42}
 .numlist li::before{content:counter(n);position:absolute;left:0;top:0;font-weight:700;color:var(--green);font-size:20px;line-height:1.25;font-variant-numeric:tabular-nums}
@@ -60,24 +64,18 @@ h3{font-size:clamp(19px,4.5vw,26px);font-weight:800;letter-spacing:-.016em;margi
 .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
 .grid5{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
 @media(min-width:900px){.grid5 .box .sub{min-height:2.5em}}
-.tables2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px}
-.tables2 .tablewrap{min-width:0}
-.tables2 .tablewrap{min-width:0}
 @media(max-width:559px){.grid3{grid-template-columns:1fr 1fr}.grid3>*:last-child:nth-child(odd){grid-column:1/-1}}
 .box{border:1px solid var(--hairline);background:var(--shade);padding:16px 18px;display:flex;flex-direction:column;gap:8px;border-radius:8px}
 .box-label{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
-.box.bad .box-label{color:var(--alert)} .box.good .box-label{color:var(--green)} .box.flag .box-label{color:var(--amber)}
+.box.good .box-label{color:var(--green)}
 .box p{margin:0;font-size:clamp(15px,4vw,18px);line-height:1.45}
 .box .big{font-size:clamp(24px,6.4vw,36px);font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .box .sub{font-size:14px;color:var(--ink-soft)}
 .bar{height:10px;border-radius:99px;background:var(--hairline);overflow:hidden}
 .bar i{display:block;height:100%;background:var(--green);border-radius:99px}
-.bar.amber i{background:var(--amber)} .bar.red i{background:var(--alert)}
-.note{border-left:4px solid var(--amber);padding:4px 0 4px 16px;font-family:var(--serif);font-size:clamp(16px,4.2vw,21px);line-height:1.5;max-width:60ch;margin:0}
-.note.good{border-color:var(--green)} .note.bad{border-color:var(--alert)}
-.callout{border:3px solid var(--alert);padding:16px 20px;display:flex;flex-direction:column;gap:6px;border-radius:8px}
-.call-verb{font-size:clamp(14px,3.8vw,17px);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--alert)}
-.call-number{font-size:clamp(20px,5.4vw,34px);font-weight:700;letter-spacing:-.02em}
+.bar.amber i{background:var(--amber)}
+.note{border-left:1px solid var(--amber);padding:4px 0 4px 16px;font-family:var(--serif);font-size:clamp(16px,4.2vw,21px);line-height:1.5;max-width:60ch;margin:0}
+.note.good{border-color:var(--green)}
 table.data{width:100%;border-collapse:collapse;font-size:clamp(13px,3.6vw,16px);font-variant-numeric:tabular-nums}
 table.data th,table.data td{text-align:left;padding:10px 10px;border-bottom:1px solid var(--hairline)}
 table.data th{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
@@ -87,48 +85,76 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
 .tablewrap{overflow-x:auto;border:1px solid var(--hairline);border-radius:8px;background:var(--paper)}
 .tablewrap table.data{min-width:0}
 .tablewrap td:first-child{overflow-wrap:anywhere}
-.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:99px}
-.tag.ok{background:#E3F2E8;color:var(--green)} .tag.warn{background:#FBEED3;color:#8A5A12} .tag.bad{background:#F9DED6;color:var(--alert)}
-  .top3{list-style:none;margin:10px 0 0;padding:10px 0 0;border-top:1px solid var(--hairline);display:flex;flex-direction:column;gap:6px;font-size:13.5px}
-  .top3 li{display:flex;justify-content:space-between;gap:10px;line-height:1.35}
-  .top3 .amt{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--ink-soft)}
-.reveal{display:none;flex-direction:column;gap:14px}
-.reveal.shown{display:flex;animation:rise .28s ease-out}
-@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.prompt{border:1px dashed var(--green);border-radius:8px;padding:14px 16px;font-weight:700;color:var(--green);cursor:pointer;font-size:16px}
-.prompt.hidden{display:none}
-.prompt kbd{font-family:inherit}
+.tables2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px}
+.tables2 .tablewrap{min-width:0}
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:99px;background:#E3F2E8;color:var(--green)}
+.top3{list-style:none;margin:10px 0 0;padding:10px 0 0;border-top:1px solid var(--hairline);display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+.top3 li{display:flex;justify-content:space-between;gap:10px;line-height:1.35}
+.top3 .amt{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--ink-soft)}
+.agenda{list-style:none;margin:0;padding:0;max-width:46ch;border-top:1px solid rgba(244,248,245,.28)}
+.agenda li{border-bottom:1px solid rgba(244,248,245,.18)}
+.agenda a{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:9px 0;color:rgba(244,248,245,.9);text-decoration:none;font-size:clamp(14px,3.8vw,17px);transition:color .18s ease,padding-left .18s ease}
+.agenda a:hover,.agenda a:focus-visible{color:#fff;padding-left:6px}
+.agenda a span{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--amber);font-variant-numeric:tabular-nums}
 .progress{position:fixed;top:0;left:0;height:4px;background:var(--green);width:0;z-index:50;transition:width .25s ease-out}
-@media(prefers-reduced-motion:reduce){.slide.is-current,.slide.is-current .pointlist li,.slide.is-current .numlist li,.slide.is-current .grid2>*,.slide.is-current .grid3>*,.slide.is-current .grid5>*,.slide.is-current .bar i,.reveal.shown{animation:none !important}.progress{transition:none}}
 .chrome{position:fixed;bottom:0;left:0;right:0;z-index:40;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-top:1px solid var(--hairline);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:10px}
-.chrome .who{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.chrome .nav{display:flex;align-items:center;gap:8px}
-.chrome button{font-family:inherit;font-size:16px;font-weight:700;border:1px solid var(--hairline);background:var(--ink);color:var(--paper);border-radius:10px;padding:12px 18px;cursor:pointer;min-height:48px}
+.chrome .who{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);flex:1;min-width:0;display:flex;align-items:center;gap:.7em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chrome .who-brand{overflow:hidden;text-overflow:ellipsis}
+.chrome .who-part{color:var(--green);font-weight:800;flex:none}
+.chrome .who-part::before{content:"·";margin-right:.7em;color:var(--fill)}
+.chrome .nav{display:flex;align-items:center;gap:8px;flex:none}
+.chrome button{font-family:inherit;font-size:16px;font-weight:700;border:1px solid var(--hairline);background:var(--ink);color:var(--paper);border-radius:10px;padding:12px 18px;cursor:pointer;min-height:48px;transition:background .18s ease,transform .18s ease,box-shadow .18s ease}
 .chrome button:first-child{background:transparent;color:var(--ink)}
-.chrome button:disabled{opacity:.35;cursor:default}
+.chrome button:disabled{opacity:.4;cursor:default}
+.chrome button:not(:disabled):hover{transform:translateY(-1px);box-shadow:0 6px 14px rgba(15,30,25,.16)}
+.chrome button:first-child:not(:disabled):hover{background:var(--shade)}
+.chrome button:not(:disabled):active{transform:none;box-shadow:none}
 .counter{font-size:13px;font-weight:700;color:var(--ink-soft);font-variant-numeric:tabular-nums;min-width:56px;text-align:center}
-@media(prefers-reduced-motion:reduce){.reveal.shown{animation:none}}
+@media(max-width:560px){.chrome .who-brand{display:none}.chrome .who-part::before{content:none}}
+@media(prefers-reduced-motion:reduce){.slide.is-current,.slide.is-current .pointlist li,.slide.is-current .numlist li,.slide.is-current .grid2>*,.slide.is-current .grid3>*,.slide.is-current .grid5>*,.slide.is-current .bar i{animation:none!important}.progress,.chrome button,.agenda a{transition:none}}
+@media print{
+  @page{size:landscape;margin:12mm}
+  body{background:#fff}
+  .progress,.chrome{display:none!important}
+  .stage{display:block;min-height:0}
+  .slide,.slide.is-current{display:flex!important;min-height:0;height:100%;justify-content:flex-start;page-break-after:always;break-after:page;padding:0;gap:10px;animation:none!important}
+  .slide.band{background:var(--navy-deep)!important;color:var(--onband)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .box,.tablewrap,tr.lead td{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1{font-size:42px}h2{font-size:32px}.bignum{font-size:64px}
+  .box{padding:10px 12px!important;gap:5px!important}
+  .box .big{font-size:26px!important}
+  .top3{font-size:11px!important;margin-top:6px!important;padding-top:6px!important}
+  .note{font-size:15px!important}
+  .pointlist li,.numlist li{font-size:14px!important}
+  .grid2,.grid3,.grid5{gap:8px!important}
+}
 </style>
 </head>
 <body>
 <div class="progress" id="progress"></div>
-<div class="stage" id="stage" data-dir="fwd">
+<main class="stage" id="stage" data-dir="fwd">
 
   <!-- 01 cover -->
-  <section class="slide band">
+  <section class="slide band" data-part="Monthly meeting" data-part-short="Cover">
     <div class="inner">
       <img class="logo" alt="XanaLife, Every Day Better" src="xana-logo.png">
-      <div class="eyebrow">XanaLife Syokimau · monthly meeting · November 2026</div>
       <h1>Syokimau monthly meeting.</h1>
-      <p class="lede">Issues update, October full month, November to the 21st, Katani minimatt and pharmacy, and the new deli lines.</p>
-      <p class="ref">Swipe or tap Next</p>
-      <p class="ref">Presented by Titoh / Mwadime</p>
+      <p class="lede">Issues, October, November to the 21st, Katani, and the new deli lines.</p>
+      <ul class="agenda">
+        <li><a href="#2">Issues raised, closed and pending <span>02</span></a></li>
+        <li><a href="#5">October sales <span>05</span></a></li>
+        <li><a href="#8">November to the 21st <span>08</span></a></li>
+        <li><a href="#11">Katani <span>11</span></a></li>
+        <li><a href="#17">Deli new listings <span>17</span></a></li>
+        <li><a href="#18">Conclusion <span>18</span></a></li>
+      </ul>
+      <p class="meta">Presented by Titoh / Mwadime · November 2026</p>
+      <p class="ref">Swipe, tap Next, or use the arrow keys</p>
     </div>
   </section>
 
   <!-- 02 issues raised -->
-  <section class="slide tall">
-    <div class="eyebrow">01 · Where we started</div>
+  <section class="slide tall" data-part="Issues">
     <h2>Issues raised.</h2>
     <p class="why">Six items the team agreed to fix. This is the checklist the rest of the deck is measured against.</p>
     <ul class="pointlist">
@@ -142,8 +168,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 03 closed -->
-  <section class="slide tall">
-    <div class="eyebrow">02 · Progress</div>
+  <section class="slide tall" data-part="Issues">
     <h2>Issues closed.</h2>
     <div class="grid2">
       <div class="box good"><span class="box-label">Closed · Deli marketing</span><p><span class="tag ok">Done</span></p><p>Marketing of <b>deli products</b> is done <b>every day</b>.</p></div>
@@ -153,8 +178,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 04 pending -->
-  <section class="slide">
-    <div class="eyebrow">03 · Still open</div>
+  <section class="slide" data-part="Issues">
     <h2>Pending issues.</h2>
     <ol class="numlist">
       <li>Some products are physically on the shelf but <b>unavailable in the POS</b>, despite the stock take.</li>
@@ -165,9 +189,8 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 05 band october -->
-  <section class="slide band">
+  <section class="slide band" data-part="October">
     <div class="inner">
-      <div class="eyebrow">Part two · October</div>
       <div class="bignum">13.32M</div>
       <h1>October sales: 78% of budget.</h1>
       <p class="lede">Total sales KSh 13,319,789 against a KSh 17.05M budget and a KSh 19.5M break-even. Six days beat target. 16,744 invoices, Oct 1 to Nov 1.</p>
@@ -175,8 +198,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 06 october detail -->
-  <section class="slide tall">
-    <div class="eyebrow">04 · October vs budget vs break-even</div>
+  <section class="slide tall" data-part="October">
     <h2>The October scorecard.</h2>
     <div class="grid3">
       <div class="box"><span class="box-label">Total sales</span><span class="big">13.32M</span><span class="sub">Budget 17.05M · BE 19.50M</span></div>
@@ -189,7 +211,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
       <div class="box"><span class="box-label">Days beating target</span><span class="big">6 days</span><span class="sub">over budget and break-even</span></div>
     </div>
     <p class="label">Days that beat target</p>
-    <div class="tablewrap short"><table class="data">
+    <div class="tablewrap"><table class="data">
       <tr><th>Date</th><th class="num">Sales</th><th class="num">vs Budget</th><th class="num">vs BE</th></tr>
       <tr><td>2 Oct</td><td class="num">1,138,297</td><td class="num">207%</td><td class="num">175%</td></tr>
       <tr><td>9 Oct</td><td class="num">815,621</td><td class="num">148%</td><td class="num">125%</td></tr>
@@ -202,8 +224,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 07 october departments -->
-  <section class="slide tall">
-    <div class="eyebrow">05 · October · wholesale · pharmacy · liquor · deli · retail</div>
+  <section class="slide tall" data-part="October">
     <h2>Where October sales came from.</h2>
     <p class="why">16,744 invoices · Oct 1 to Nov 1, 2026 on the dashboard card.</p>
     <div class="grid5">
@@ -217,9 +238,8 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 08 band november -->
-  <section class="slide band">
+  <section class="slide band" data-part="November">
     <div class="inner">
-      <div class="eyebrow">Part three · November to 21st</div>
       <div class="bignum">9.06M</div>
       <h1>November to 21st: 46% of budget.</h1>
       <p class="lede">KSh 9,057,499 with the festive run still ahead. Average daily sales 431,309 against a 650,000 daily target. 12,239 invoices.</p>
@@ -227,8 +247,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 09 november detail -->
-  <section class="slide tall">
-    <div class="eyebrow">06 · November vs budget vs break-even · up to 21st</div>
+  <section class="slide tall" data-part="November">
     <h2>The November scorecard.</h2>
     <div class="grid3">
       <div class="box"><span class="box-label">Total sales (to 21st)</span><span class="big">9.06M</span><span class="sub">Budget 19.50M · BE 19.50M</span></div>
@@ -241,7 +260,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
       <div class="box"><span class="box-label">Days beating target</span><span class="big">2 days</span><span class="sub">over the 650,000 target</span></div>
     </div>
     <p class="label">Days that beat target</p>
-    <div class="tablewrap short"><table class="data">
+    <div class="tablewrap"><table class="data">
       <tr><th>Date</th><th class="num">Sales</th><th class="num">Target</th><th class="num">%</th></tr>
       <tr><td>1 Nov</td><td class="num">791,394</td><td class="num">650,000</td><td class="num">122%</td></tr>
       <tr><td>6 Nov</td><td class="num">799,060</td><td class="num">650,000</td><td class="num">123%</td></tr>
@@ -250,8 +269,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 10 november departments -->
-  <section class="slide tall">
-    <div class="eyebrow">07 · November · wholesale · pharmacy · liquor · deli · retail</div>
+  <section class="slide tall" data-part="November">
     <h2>Where November sales come from.</h2>
     <p class="why">12,239 invoices · Nov 1 to 21, 2026 on the dashboard card.</p>
     <div class="grid5">
@@ -265,9 +283,8 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 11 band katani october -->
-  <section class="slide band">
+  <section class="slide band" data-part="Katani · October" data-part-short="Katani">
     <div class="inner">
-      <div class="eyebrow">Part four · Katani</div>
       <div class="bignum">1.44M</div>
       <h1>Katani October: 96% of budget.</h1>
       <p class="lede">KSh 1,443,224 — minimatt 1,077,567 plus pharmacy 365,657 — against a KSh 1.5M budget and a KSh 1.7M break-even. 4,426 invoices.</p>
@@ -275,8 +292,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 12 katani october detail -->
-  <section class="slide tall">
-    <div class="eyebrow">08 · Katani minimatt + pharmacy · October</div>
+  <section class="slide tall" data-part="Katani · October" data-part-short="Katani">
     <h2>Katani October scorecard.</h2>
     <div class="grid3">
       <div class="box"><span class="box-label">Total sales</span><span class="big">1.44M</span><span class="sub">Budget 1.50M · BE 1.70M</span></div>
@@ -289,7 +305,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
       <div class="box"><span class="box-label">Pharmacy share</span><span class="big">25.3%</span><span class="sub">365,657 of 1,443,224</span></div>
     </div>
     <p class="label">How the 1,443,224 is made up</p>
-    <div class="tablewrap short"><table class="data">
+    <div class="tablewrap"><table class="data">
       <tr><th>Department</th><th class="num">Sales</th></tr>
       <tr><td>Katani minimatt · wholesale / retail</td><td class="num">1,077,567</td></tr>
       <tr><td>Katani pharmacy</td><td class="num">365,657</td></tr>
@@ -298,8 +314,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 13 katani october departments -->
-  <section class="slide tall">
-    <div class="eyebrow">09 · Katani · October · wholesale / retail · pharmacy</div>
+  <section class="slide tall" data-part="Katani · October" data-part-short="Katani">
     <h2>Where Katani October sales came from.</h2>
     <p class="why">4,426 invoices · 4,426 customers · 8,583 transactions on the Katani card.</p>
     <div class="grid2">
@@ -310,9 +325,8 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 14 band katani november -->
-  <section class="slide band">
+  <section class="slide band" data-part="Katani · November" data-part-short="Katani">
     <div class="inner">
-      <div class="eyebrow">Part five · Katani November to 21st</div>
       <div class="bignum">1.07M</div>
       <h1>Katani November to 21st: 71% of budget.</h1>
       <p class="lede">KSh 1,066,914 — minimatt 808,256 plus pharmacy 258,658 — against a KSh 1.5M budget and a KSh 1.7M break-even. 2,981 invoices.</p>
@@ -320,8 +334,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 15 katani november detail -->
-  <section class="slide tall">
-    <div class="eyebrow">10 · Katani minimatt + pharmacy · November to 21st</div>
+  <section class="slide tall" data-part="Katani · November" data-part-short="Katani">
     <h2>Katani November scorecard.</h2>
     <div class="grid3">
       <div class="box"><span class="box-label">Total sales (to 21st)</span><span class="big">1.07M</span><span class="sub">Budget 1.50M · BE 1.70M</span></div>
@@ -334,7 +347,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
       <div class="box"><span class="box-label">Pharmacy share</span><span class="big">24.2%</span><span class="sub">258,658 of 1,066,914</span></div>
     </div>
     <p class="label">How the 1,066,914 is made up</p>
-    <div class="tablewrap short"><table class="data">
+    <div class="tablewrap"><table class="data">
       <tr><th>Department</th><th class="num">Sales</th></tr>
       <tr><td>Katani minimatt · wholesale / retail</td><td class="num">808,256</td></tr>
       <tr><td>Katani pharmacy</td><td class="num">258,658</td></tr>
@@ -343,8 +356,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 16 katani november departments -->
-  <section class="slide tall">
-    <div class="eyebrow">11 · Katani · November to 21st · wholesale / retail · pharmacy</div>
+  <section class="slide tall" data-part="Katani · November" data-part-short="Katani">
     <h2>Where Katani November sales came from.</h2>
     <p class="why">2,981 invoices · 2,981 customers · 5,897 transactions on the Katani card.</p>
     <div class="grid2">
@@ -355,8 +367,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 17 deli new listings -->
-  <section class="slide tall">
-    <div class="eyebrow">12 · Deli / Bakery · new listing sales · October and November</div>
+  <section class="slide tall" data-part="Deli new listings">
     <h2>The new deli lines.</h2>
     <p class="why">21 new lines across October and November. <b>XanaLife Bites</b> alone moves 903 packs.</p>
     <div class="tables2">
@@ -393,8 +404,7 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 18 conclusion -->
-  <section class="slide tall">
-    <div class="eyebrow">13 · Conclusion</div>
+  <section class="slide tall" data-part="Conclusion">
     <h2>What we agree before leaving.</h2>
     <ol class="numlist">
       <li><b>Work on our system</b> because customers are getting frustrated.</li>
@@ -406,24 +416,23 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   </section>
 
   <!-- 19 close -->
-  <section class="slide band">
+  <section class="slide band" data-part="Close">
     <div class="inner">
       <img class="logo" alt="XanaLife, Every Day Better" src="xana-logo.png">
-      <div class="eyebrow">XanaLife Syokimau · November 2026</div>
       <h1>Thank you.</h1>
       <p class="lede">Prepared by Titoh / Mwadime.</p>
-      <p class="ref" style="color:rgba(244,248,245,.55)">Internal use · figures as presented in the monthly meeting deck</p>
+      <p class="ref">Internal use · figures as presented in the monthly meeting deck</p>
     </div>
   </section>
 
-</div>
+</main>
 
 <div class="chrome">
-  <span class="who">XanaLife Syokimau · monthly meeting</span>
+  <span class="who"><span class="who-brand">XanaLife Syokimau</span><span class="who-part" id="part">Monthly meeting</span></span>
   <div class="nav">
-    <button type="button" id="prev" aria-label="Previous slide">&larr; Back</button>
-    <span class="counter" id="counter">1 / 19</span>
-    <button type="button" id="next" aria-label="Next slide">Next &rarr;</button>
+    <button type="button" id="prev" aria-label="Previous page">&larr; Back</button>
+    <span class="counter" id="counter" role="status" aria-live="polite">1 / 19</span>
+    <button type="button" id="next" aria-label="Next page">Next &rarr;</button>
   </div>
 </div>
 
@@ -432,54 +441,54 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
   var slides=Array.prototype.slice.call(document.querySelectorAll(".slide"));
   var counter=document.getElementById("counter"),bar=document.getElementById("progress");
   var prevBtn=document.getElementById("prev"),nextBtn=document.getElementById("next");
+  var part=document.getElementById("part"),stage=document.getElementById("stage");
   document.querySelectorAll(".pointlist,.numlist,.grid2,.grid3,.grid5").forEach(function(list){
     Array.prototype.forEach.call(list.children,function(child,idx){child.style.setProperty("--n",idx)});
   });
-  var i=0,step=0,lastIndex=0;
+  slides.forEach(function(s){
+    var h=s.querySelector("h1,h2");
+    if(h)s.setAttribute("aria-label",h.textContent.trim());
+  });
+  var i=0,lastIndex=0,first=true;
+  var narrow=window.matchMedia("(max-width:560px)");
+  function setPart(){
+    var cur=slides[i];
+    part.textContent=narrow.matches?(cur.getAttribute("data-part-short")||cur.getAttribute("data-part")):(cur.getAttribute("data-part")||"XanaLife Syokimau");
+  }
   function hashIndex(){
     var m=/^#(\d+)$/.exec(location.hash||"");
     if(!m)return null;
     var n=parseInt(m[1],10);
     return n>=1&&n<=slides.length?n-1:null;
   }
-  function stepsOn(s){return parseInt(s.getAttribute("data-steps")||"0",10)}
-  function revealIntoView(slide){
-    var blocks=slide.querySelectorAll(".reveal.shown");if(!blocks.length)return;
-    var top=Infinity,bottom=-Infinity;
-    Array.prototype.forEach.call(blocks,function(b){var r=b.getBoundingClientRect();if(r.top<top)top=r.top;if(r.bottom>bottom)bottom=r.bottom;});
-    var chrome=document.querySelector(".chrome"),pad=20;
-    var viewTop=pad,viewBottom=window.innerHeight-(chrome?chrome.offsetHeight:0)-pad;
-    if(top>=viewTop&&bottom<=viewBottom)return;
-    var target=bottom-viewBottom>0?window.pageYOffset+bottom-viewBottom:window.pageYOffset+top-viewTop;
-    window.scrollTo({top:Math.max(0,target),behavior:"smooth"});
-  }
   function render(){
-    var moved=i!==lastIndex;
-    var stage=document.getElementById("stage");
     if(i>lastIndex)stage.dataset.dir="fwd";else if(i<lastIndex)stage.dataset.dir="back";
     lastIndex=i;
-    slides.forEach(function(s,n){s.classList.toggle("is-current",n===i)});
     var cur=slides[i];
-    cur.querySelectorAll(".reveal").forEach(function(el){
-      el.classList.toggle("shown",step>=parseInt(el.getAttribute("data-step")||"1",10));
+    slides.forEach(function(s,n){
+      var on=n===i;
+      s.classList.toggle("is-current",on);
+      if(on)s.setAttribute("tabindex","-1");else s.removeAttribute("tabindex");
     });
-    var p=cur.querySelector("[data-prompt]");if(p)p.classList.toggle("hidden",step>=stepsOn(cur));
+    setPart();
     counter.textContent=(i+1)+" / "+slides.length;
     bar.style.width=((i+1)/slides.length*100)+"%";
-    try{history.replaceState(null,"","#"+ (i+1))}catch(e){}
-    prevBtn.disabled=(i===0&&step===0);
-    nextBtn.disabled=(i===slides.length-1&&step>=stepsOn(slides[i]));
-    if(step>0)revealIntoView(cur);else if(moved)window.scrollTo(0,0);
+    prevBtn.disabled=(i===0);
+    nextBtn.disabled=(i===slides.length-1);
+    try{history.replaceState(null,"","#"+(i+1))}catch(e){}
+    window.scrollTo(0,0);
+    if(!first)cur.focus({preventScroll:true});
+    first=false;
   }
-  function fwd(){if(step<stepsOn(slides[i])){step++}else if(i<slides.length-1){i++;step=0}else return;render()}
-  function back(){if(step>0){step--}else if(i>0){i--;step=stepsOn(slides[i])}else return;render()}
+  function fwd(){if(i<slides.length-1){i++;render()}}
+  function back(){if(i>0){i--;render()}}
   nextBtn.addEventListener("click",fwd);prevBtn.addEventListener("click",back);
-  document.querySelectorAll("[data-prompt]").forEach(function(p){p.addEventListener("click",fwd)});
   document.addEventListener("keydown",function(e){
-    if(e.key==="ArrowRight"||e.key==="PageDown"||e.key===" "){e.preventDefault();fwd()}
+    if(e.target&&/^(A|BUTTON)$/.test(e.target.tagName)&&(e.key===" "||e.key==="Enter"))return;
+    if(e.key==="ArrowRight"||e.key==="PageDown"){e.preventDefault();fwd()}
     else if(e.key==="ArrowLeft"||e.key==="PageUp"){e.preventDefault();back()}
-    else if(e.key==="Home"){i=0;step=0;render()}
-    else if(e.key==="End"){i=slides.length-1;step=stepsOn(slides[i]);render()}
+    else if(e.key==="Home"){e.preventDefault();i=0;render()}
+    else if(e.key==="End"){e.preventDefault();i=slides.length-1;render()}
   });
   var tx=null;
   document.addEventListener("touchstart",function(e){tx=e.changedTouches[0].clientX},{passive:true});
@@ -488,8 +497,9 @@ table.data tr.lead td{font-weight:800;background:#FBEED3;color:#8A5A12}
     if(Math.abs(dx)<48)return;if(dx<0)fwd();else back();
   },{passive:true});
   window.addEventListener("hashchange",function(){
-    var n=hashIndex();if(n===null||n===i)return;i=n;step=0;render();
+    var n=hashIndex();if(n===null||n===i)return;i=n;render();
   });
+  if(narrow.addEventListener)narrow.addEventListener("change",setPart);
   var start=hashIndex();
   if(start!==null)i=start;
   render();
